@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: rgb(10, 10, 10);
+}
+.calculate__app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.calculate__board--rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  #clear {
+    padding: 60px;
+  }
+}
+
+//數字按鈕
+.number__btn {
+  display: inline-block;
+  border: none;
+  margin: 5px;
+  height: 100%;
+  //border-radius: 50%;
+  background-color: #252525;
+  &:hover {
+    opacity: 0.9;
+  }
+  div {
+    width: 15px;
+    height: 30px;
+    padding: 20px 22px;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+  }
+}
+
+//運算符號
+.sign__btn {
+  display: inline-block;
+  border: none;
+  margin: 5px;
+  height: 100%;
+  //border-radius: 50%;
+  background-color: #f8a623;
+  &:hover {
+    opacity: 0.9;
+  }
+  div {
+    height: 30px;
+    width: 20px;
+    padding: 20px;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+  }
+}
+
+//歸零符號
+.ac__btn {
+  display: inline-block;
+  border: none;
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background-color: #f8a623;
+  &:hover {
+    opacity: 0.9;
+  }
+  div {
+    height: 30px;
+    padding: 18px;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+  }
+}
+
+//顯示區
+.calculate__view {
+  height: 60px;
+  width: 100%;
+  border: 1px solid rgb(66, 65, 65);
+  background-color: rgb(20, 20, 20);
+  margin-bottom: 5px;
+  div {
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(255, 250, 245);
+  }
+}
