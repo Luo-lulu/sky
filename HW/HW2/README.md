@@ -72,3 +72,36 @@ React 的部分到這邊其實就可以用了～～
 有時間的話再把開發中很好用的 webpack-dev-server 補充進來
 
 ### Production 版本使用 NodeJs 作為伺服器架起專案
+
+這題目我真的看了超久沒有看懂ＸＤ，在我覺得我好像知道該查什麼資料的時候又發覺我好像還是沒懂，甚至請我男友來幫我解惑，總之最後我們覺得題目應該是在表達，我 build 完有個 production 版本了，把它用 node.js 跑起來
+
+開發版本：我一改程式碼刷新 localhost(甚至不用刷新)，app 就會動
+產品版本：我改本地端的程式碼，不上 code，產品版本是不會理我的
+
+參考了很多資料才拼拼湊湊完成的
+[How To Develop and Build React App With NodeJS][1]
+[ 第一次 NodeJS 就上手 Part 2][2]
+[Express][3]
+[1]: https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-react-app-with-nodejs-bc06fa1c18f3 "How To Develop and Build React App With NodeJS"
+[2]: https://ithelp.ithome.com.tw/articles/10091129 " 第一次 NodeJS 就上手 Part 2"
+[3]: https://expressjs.com/zh-tw/ "Express"
+
+1.首先我開了一個 server 的資料夾（參考的範例主要是放 API 相關的東西，雖然我的作品沒有用到，但還是跟著範例一步一步做）
+對了，要特別再開一個資料夾是因為 npm 套件後會有 node_modules，會與根目錄的相撞容易出問題
+
+2.`npm init` 生成一個 package.json 檔案
+
+3.`npm i express nodemon`
+完成後回到 package.json 在 scripts 寫入
+
+```
+"start": "node server.js",
+   "build": "webpack",
+   "dev": "nodemon ./server.js localhost"
+```
+
+4.新增一個 server.js 檔，依照 express 的文檔寫入內容
+
+5.接著`npm run dev`就成功啦！！
+
+雖然回頭寫這些心得跟過程感覺好像步驟很少，但其實真的要花很多時間去了解跟實作，就算我今天真的做出來了，我也完全不敢說我已經掌握它了，只能說很感謝網路上有很多願意分享經驗的人，才讓我這個小白有辦法能夠完成作業
